@@ -1,0 +1,36 @@
+<idea-plugin version="2">
+  <id>siosio.FileOpenPlugin</id>
+  <name>File Open Plugin</name>
+  <version>0.1</version>
+  <vendor email="siosio12@gmail.com" url="">siosio</vendor>
+
+  <description><![CDATA[
+open with file in tab
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <idea-version since-build="131"/>
+  <depends>com.intellij.modules.lang</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <actions>
+    <group id="siosio.OpenFileTab" text="Open Tab" popup="true">
+      <action id="siosio.LeftTab" class="siosio.fileopen.OpenLeftTabAction"
+          text="Open Left Tab" />
+      <action id="siosio.RightTab" class="siosio.fileopen.OpenRightTabAction"
+          text="Open Right Tab" />
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="EditSource" />
+    </group>
+  </actions>
+</idea-plugin>
