@@ -31,11 +31,7 @@ public class OpenLeftTabAction : OpenTabActionSupport() {
     if (splitCount != 2) {
       return false
     }
-    val splitter = getSplitter(fileEditorManager)
-    if (splitter == null) {
-      return false
-    }
-    return !splitter.getOrientation()
+    return !getSplitter(fileEditorManager).getOrientation()
   }
 }
 

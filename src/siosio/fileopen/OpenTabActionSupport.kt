@@ -28,17 +28,12 @@ abstract class OpenTabActionSupport  : BaseNavigateToSourceAction(true) {
     e.getPresentation().setEnabled(isEnabled(fileEditorManager))
   }
 
-  fun getSplitter(fileEditorManager: FileEditorManagerEx):Splitter? {
+  fun getSplitter(fileEditorManager: FileEditorManagerEx):Splitter {
     val editorWindow = fileEditorManager.getCurrentWindow()
-    val container = editorWindow?.getTabbedPane()?.getComponent()?.getParent()?.getParent()
-    return if (container is Splitter) {
-      container as Splitter
-    } else {
-      null
-    }
+    val container = editorWindow!!.getTabbedPane()!!.getComponent()!!.getParent()!!.getParent()
+    return container as Splitter
   }
 
   abstract fun isEnabled(fileEditorManager: FileEditorManagerEx):Boolean
-
 
 }

@@ -29,11 +29,19 @@ public class OpenRightTabAction : OpenTabActionSupport() {
 
     if (fileEditorManager.isInSplitter()) {
       fileEditorManager.getWindows()[1].setAsCurrentWindow(true)
+      fileEditorManager.openFile(file, true)
     } else {
       val window = e.getData(EditorWindow.DATA_KEY)
       fileEditorManager.createSplitter(SwingConstants.VERTICAL, window)
+
+      val currentFile = fileEditorManager.getCurrentFile()
+      if (currentFile == file) {
+        return
+      }
+
+      fileEditorManager.openFile(file, true)
+      fileEditorManager.getCurrentWindow()!!.closeFile(currentFile)
     }
-    fileEditorManager.openFile(file, true)
   }
 
   override fun isEnabled(fileEditorManager: FileEditorManagerEx): Boolean {
@@ -41,10 +49,10 @@ public class OpenRightTabAction : OpenTabActionSupport() {
     if (splitCount != 1 && splitCount != 2) {
       return false
     }
-    val splitter = getSplitter(fileEditorManager)
-    if (splitter == null) {
-      return true
+    return if (splitCount == 1) {
+      true
+    } else {
+      !getSplitter(fileEditorManager).getOrientation()
     }
-    return !splitter.getOrientation()
   }
 }
