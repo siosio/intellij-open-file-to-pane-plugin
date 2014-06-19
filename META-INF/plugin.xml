@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>siosio.FileOpenPlugin</id>
   <name>File Open Plugin</name>
-  <version>0.1</version>
+  <version>0.2</version>
   <vendor email="siosio12@gmail.com" url="">siosio</vendor>
 
   <description><![CDATA[
@@ -9,6 +9,9 @@ open with file in tab
     ]]></description>
 
   <change-notes><![CDATA[
+    <p>0.2</p>
+    menu label was changed.
+    <br/>
     ]]>
   </change-notes>
 
@@ -25,12 +28,13 @@ open with file in tab
   </project-components>
 
   <actions>
-    <group id="siosio.OpenFileTab" text="Open Tab" popup="true">
+    <group id="siosio.OpenFileTab" text="Open in (Left | Right) Pane" popup="true">
       <action id="siosio.LeftTab" class="siosio.fileopen.OpenLeftTabAction"
-          text="Open Left Tab" />
+          text="Left Pane" />
       <action id="siosio.RightTab" class="siosio.fileopen.OpenRightTabAction"
-          text="Open Right Tab" />
+          text="Right Pane" />
       <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="EditSource" />
+      <add-to-group group-id="ChangesViewPopupMenu" anchor="after" relative-to-action="EditSource" />
     </group>
   </actions>
 </idea-plugin>
