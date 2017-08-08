@@ -3,7 +3,7 @@ package siosio.fileopen
 import com.intellij.openapi.actionSystem.*
 import com.intellij.openapi.fileEditor.ex.*
 
-class OpenLeftTabAction : OpenTabActionSupport() {
+class OpenLeftPaneAction : OpenPaneActionSupport() {
 
     override fun actionPerformed(e: AnActionEvent) {
         e.getData(CommonDataKeys.PROJECT)?.let {project ->

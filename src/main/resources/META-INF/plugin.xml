@@ -29,8 +29,8 @@
 
   <actions>
     <group id="siosio.OpenFileTab" text="Open in (Left | Right) Pane" popup="true">
-      <action id="siosio.LeftTab" class="siosio.fileopen.OpenLeftTabAction" text="Left Pane" />
-      <action id="siosio.RightTab" class="siosio.fileopen.OpenRightTabAction" text="Right Pane" />
+      <action id="siosio.LeftTab" class="siosio.fileopen.OpenLeftPaneAction" text="Left Pane" />
+      <action id="siosio.RightTab" class="siosio.fileopen.OpenRightPaneAction" text="Right Pane" />
       <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="EditSource" />
       <add-to-group group-id="ChangesViewPopupMenu" anchor="after" relative-to-action="EditSource" />
     </group>

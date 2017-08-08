@@ -23,7 +23,7 @@ tasks.withType(JavaCompile) {
 
 
 intellij {
-  version  "IU-2017.1"
+  version  "IU-2017.2"
   updateSinceUntilBuild = false
 }
 

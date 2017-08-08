@@ -7,7 +7,7 @@ import com.intellij.openapi.editor.ex.util.*
 import com.intellij.openapi.fileEditor.ex.FileEditorManagerEx
 import com.intellij.openapi.ui.Splitter
 
-abstract class OpenTabActionSupport : BaseNavigateToSourceAction(true) {
+abstract class OpenPaneActionSupport : BaseNavigateToSourceAction(true) {
     override fun update(e: AnActionEvent) {
         super.update(e)
 

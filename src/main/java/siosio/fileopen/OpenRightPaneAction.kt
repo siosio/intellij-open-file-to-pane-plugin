@@ -5,7 +5,7 @@ import com.intellij.openapi.fileEditor.ex.*
 import com.intellij.openapi.fileEditor.impl.*
 import javax.swing.*
 
-class OpenRightTabAction : OpenTabActionSupport() {
+class OpenRightPaneAction : OpenPaneActionSupport() {
 
     override fun actionPerformed(e: AnActionEvent) {
         e.getData(CommonDataKeys.PROJECT)?.let { project ->
