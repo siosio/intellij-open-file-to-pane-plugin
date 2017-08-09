@@ -23,7 +23,7 @@ tasks.withType(JavaCompile) {
 
 
 intellij {
-  version  "IU-2017.2"
+  version  "IU-172.3757.29"
   updateSinceUntilBuild = false
 }
 
@@ -36,6 +36,6 @@ dependencies {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '4.0.2'
+  gradleVersion = '4.1'
 }
 

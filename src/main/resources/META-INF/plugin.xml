@@ -1,7 +1,7 @@
 <idea-plugin>
   <id>siosio.FileOpenPlugin</id>
-  <name>open file to pane</name>
-  <version>0.3</version>
+  <name>open file to pane plugin</name>
+  <version>0.4</version>
   <vendor email="siosio12@gmail.com" url="">siosio</vendor>
 
   <description><![CDATA[
@@ -15,7 +15,7 @@
     ]]>
   </change-notes>
 
-  <idea-version since-build="131"/>
+  <idea-version since-build="131" until-build="171.*"/>
   <depends>com.intellij.modules.lang</depends>
 
   <extensions defaultExtensionNs="com.intellij">
