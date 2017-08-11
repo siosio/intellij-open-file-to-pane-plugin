@@ -25,7 +25,6 @@ class OpenRightPaneAction : OpenPaneActionSupport() {
                 }
 
                 fileEditorManager.openFile(file, true)
-                fileEditorManager.currentWindow!!.closeFile(currentFile)
             }
         }
     }
@@ -39,8 +38,8 @@ class OpenRightPaneAction : OpenPaneActionSupport() {
             true
         } else {
             getSplitter(fileEditorManager)?.let {
-                !it.getOrientation()
-            } ?: false
+                !it.orientation
+            } == true
         }
     }
 }
